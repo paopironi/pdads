@@ -39,5 +39,5 @@ jobs:
           host: 132.145.27.159
           username: ubuntu
           key: ${{ secrets.SSH_KEY }}
-          script: ls -al
+          script_path: upload.sh 
 
