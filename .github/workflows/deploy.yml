@@ -31,5 +31,5 @@ jobs:
         run: |
           eval $(ssh-agent -s)
           ssh-add - <<< "${key}"
-          sftp ubuntu@132.145.27.159 <<< 'put -r ./notebooks /home/ubuntu/documents'
+          sftp -o StrictHostKeychecking=no ubuntu@132.145.27.159 <<< 'put -r ./notebooks /home/ubuntu/documents'
 
